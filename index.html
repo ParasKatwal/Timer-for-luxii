@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LUXII</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 1200px)">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <!--Import font awesome-->
+    <script src="https://kit.fontawesome.com/3abcfb3692.js"></script> 
+	<style>
+		#load{
+			width:100%;
+			height:100%;
+			background-color: #1a191c;
+			position:fixed;
+			z-index:9999;
+			display: block;
+			padding-top:25%
+		}
+	</style>
+	<script>
+		document.onreadystatechange = function () {
+		  var state = document.readyState
+		  if (state == 'interactive') {
+			   document.getElementById('contents').style.visibility="hidden";
+		  } else if (state == 'complete') {
+			  setTimeout(function(){
+				 document.getElementById('interactive');
+				 document.getElementById('load').style.visibility="hidden";
+				 document.getElementById('contents').style.visibility="visible";
+			  },1000);
+		  }
+		}
+	</script>
+</head>
+<body>
+        <center>
+	<div id="load">
+		<img src="img/logow.png" height="100px" width="250px">
+		<img src="img/loadp.jpg" height="70px" width="70px">
+	</div> 
+	</center>
+    <div id="contents">
+    </div>
+    <header class="d-flex justify-content-around align-items-center">
+        <div class="logo">
+            <img src="img/Slogo.jpg" alt="">
+        </div>
+        <div class="menu">
+            <a href="#" class="login">Log in</a>
+            <a href="#"><i class="fas fa-bars"></i>Menu</a>
+        </div>
+    </header>
+
+    <div class="sectionOne">
+        <div class="container">
+            <div class="row" >
+                <div onclick="enableAutoplay()" class="col-sm-12 col-md-10 video-box embed-responsive embed-responsive-16by9" >
+                    <video id="myVideo" controls="controls" autoplay loop muted>
+					  <source src="video/luxii.mp4" type="video/mp4">
+					  Your browser does not support HTML5 video.
+					</video>
+                </div>
+				
+                <div class="timer">
+                    <!-- <div class="setters">
+                        <div class="minutes-set">
+                        <button data-setter="minutes-plus">+</button>
+                        <button data-setter="minutes-minus">-</button>
+                        </div>
+                        <div class="seconds-set">
+                        <button data-setter="seconds-plus">+</button>
+                        <button data-setter="seconds-minus">-</button>
+                        </div>
+                    </div> -->
+                    <div class="circle">
+                        <svg width="200" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(110,110)">
+                            <circle r="100" class="e-c-base"/>
+                            <g transform="rotate(-90)">
+                                <circle r="100" class="e-c-progress"/>
+                                <g id="e-pointer">
+                                    <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
+                                </g>
+                            </g>
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="controlls">
+                        <div class="display-remain-time">15:00</div>
+                        <button class="play" id="pause"></button>
+                    </div>
+                    <div class="cryo"><p>cryo</p></div>
+                    <div class="compression"><p>compression</p></div>
+                    <div class="hydrate"><p>hydrate</p></div>
+                    <div class="oxygen"><p>oxygen</p></div>
+                </div>
+				
+                <div class="col-sm-12 col-md-6 text-box">
+                    <h3>Come And Tell Your Story</h3>
+                    <h5>we’ll provide the resets to keep you going</h5>
+                </div>
+                <div class="col-sm-12 col-md-6 text-box2">
+                    <a href="#">Find a location</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionTwo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 box1">
+                    <h2>Get Resets Covered By Benefits</h2>
+                    <p>
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="col-sm-12 col-md-7 table-box">
+                    <img src="img/Table.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-10 box2">
+                    <h2>The Magic Of Combining A Few Cutting Edge Therapies
+                    Together</h2>
+                    <p>Individual therapies are just not cutting it anymore</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionThree">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-7">
+                    <h2>Get Some Of Your Resets Covered By
+                    Insurance</h2>
+                    <a href="#">Learn About Insurance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionFour">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 box-1">
+                    <h2>Tell Us About Your
+                    Needs</h2>
+                    <a href="#">Get Started</a>
+                </div>
+                <div class="col-sm-12 col-md-7 box-2">
+                    <div class="box-2-a">
+                        <h2>More Details on How it works</h2>
+                    </div>
+                    <div class="box-2-b d-flex">
+                        <div>
+                            <h4>Track Your Resets Through Your Luxii
+                            Account</h4>
+                            <a href="#">Sign Up</a>
+                        </div>
+                        <div>
+                            <img src="img/mob2.png" alt="">
+                        </div>
+                        <div>
+                            <img src="img/mob1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-3 menu d-flex align-items-center">
+                    <ul>
+                        <li>ABC</li>
+                        <li>ABC</li>
+                        <li>ABC</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 SM d-flex justify-content-center align-items-center">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Say hello at 613-805-1879 | or | hello@30investments.ca</p>
+        </div>
+    </footer>
+	
+	
+	<script>
+<script src="app.js"></script>
+</script>
+	<script>
+var vid = document.getElementById("myVideo");
+function enableAutoplay() { 
+  vid.autoplay = true;
+  vid.load();
+}
+function disableAutoplay() { 
+  vid.autoplay = false;
+  vid.load();
+} 
+
+function checkAutoplay() { 
+  alert(vid.autoplay);
+} 
+</script> 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
